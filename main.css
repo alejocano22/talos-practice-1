@@ -104,7 +104,7 @@ main {
 @media (min-width: 577px) {
   /* TODO: DELETE */
   body {
-    background-color: yellow;
+    background-color: white;
   }
 
   #welcome h1 {
