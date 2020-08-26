@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice 1</title>
+    <title>Responsive Design Practice</title>
     <link rel="stylesheet" href="./resources/style.css" />
     <link rel="stylesheet" href="./main.css" />
   </head>
@@ -63,12 +63,12 @@
         </p>
         <ul class="service-list">
           <li class="service-item">
-            <div class="icon-laptop service-image"></div>
+            <div class="service-image icon-laptop"></div>
             <p class="service-title">Brand identity</p>
             <p class="service-description">
               convallis convallis tellus id interdum velit laoreet id donec
               ultrices tincidunt arcu non sodales neque sodales ut etiam sit
-              amet nisl purus in mollis nunc
+              amet nisl purus in mollis nunc.
             </p>
           </li>
           <li class="service-item">
@@ -153,37 +153,71 @@
         <p class="section-subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <ul class="work-list">
-          <li class="work-item">
-            <img src="./images/portfolio-img1.jpg" alt="portfolio-1">
-          </li>
-          <li class="work-item">
-            <img src="./images/portfolio-img2.jpg" alt="portfolio-2">
-          </li>
-          <li class="work-item">
-            <img src="./images/portfolio-img3.jpg" alt="portfolio-3">
-          </li>
-          <li class="work-item">
-            <img src="./images/portfolio-img4.jpg" alt="portfolio-4">
-          </li>
-          <li class="work-item">
-            <img src="./images/portfolio-img5.jpg" alt="portfolio-5">
-          </li>
-          <li class="work-item">
-            <img src="./images/portfolio-img6.jpg" alt="portfolio-6">
-          </li>
+        <div class="works">
+          <img src="./images/portfolio-img1.jpg" alt="portfolio-1" />
+          <img src="./images/portfolio-img2.jpg" alt="portfolio-2" />
+          <img src="./images/portfolio-img3.jpg" alt="portfolio-3" />
+          <img src="./images/portfolio-img4.jpg" alt="portfolio-4" />
+          <img src="./images/portfolio-img5.jpg" alt="portfolio-5" />
+          <img src="./images/portfolio-img6.jpg" alt="portfolio-6" />
+        </div>
       </section>
 
-      <section id="our-blog"><h1 class="section-title">our blog</h1></section>
+      <section id="our-blog">
+        <h1 class="section-title">Our blog</h1>
+        <p class="section-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <div class="blog-list">
+          <article class="blog-item blog-item-primary">
+            <h3>Online Bussines / Dec 9, 2016</h3>
+            <h1>The best way to make Online Bussines</h1>
+            <h2>by Johnathan Doe</h2>
+          </article>
+          <article class="blog-item blog-item-primary">
+            <h3>Frontend Dev / Dec 9, 2016</h3>
+            <h1>Frontend Developer vs UI Designer</h1>
+            <h2>by Johnny James</h2>
+          </article>
+          <article class="blog-item">
+            <h3>Social Marketing / Dec 9, 2016</h3>
+            <h1>What is Social Marketing Bussines</h1>
+            <h2>by Mary Louis</h2>
+          </article>
+          <article class="blog-item">
+            <h3>Web Design / Dec 9, 2016</h3>
+            <h1>How to become Web Designer</h1>
+            <h2>by David Jenn</h2>
+          </article>
+        </div>
+      </section>
       <section id="questions">
         <h1 class="section-title">Asked questions</h1>
       </section>
       <section id="testimonial">
         <h1 class="section-title">Testimonial</h1>
       </section>
-      <section id="touch"><h1 class="section-title">Get in touch</h1></section>
+      <section id="touch">
+        <h1 class="section-title">Get in touch</h1>
+        <p class="section-subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <form class="touch-form">
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <input type="number" id="phone" name="phone" placeholder="Phone" />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+          ></textarea>
+          <button type="submit" value="Submit">SHOOT MESSAGE</button>
+        </form>
+      </section>
     </main>
-    <footer><h1>Footer</h1></footer>
+    <footer>
+      <h1>Copyright Talos HTML Template | All rights reserved.</h1>
+    </footer>
   </body>
   <script src="./main.js"></script>
 </html>

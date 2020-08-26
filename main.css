@@ -1,11 +1,10 @@
-/* html {
-  height: 100%;
-} */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --page-green: #65c7b7;
   --dark-gray: #575656;
   --light-gray: #faf6f6;
+  --border-gray: #dfdbdb;
 }
 
 * {
@@ -13,10 +12,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "PT Sans", sans-serif;
   margin: 0;
   display: grid;
-  grid-template-rows: auto 4rem auto fit-content(8rem);
+  grid-template-rows: auto 4rem auto auto;
   grid-template-areas:
     "welcome"
     "header"
@@ -27,8 +26,10 @@ body {
 
 main {
   grid-area: main;
+  padding: 1rem;
 }
 
+/* WELCOME VIEW */
 #welcome {
   grid-area: welcome;
   display: flex;
@@ -38,7 +39,6 @@ main {
   background: url("./images/home-bg-2.jpg") center/cover no-repeat border-box;
   width: 100vw;
   height: 50vh;
-  position: relative;
 }
 
 #welcome h1 {
@@ -100,14 +100,11 @@ main {
   color: var(--page-green);
 }
 
-/* WELCOME VIEW */
 /* Tablet View */
 @media (min-width: 577px) {
-  /* TODO: DELETE */
-  body {
-    background-color: white;
+  main {
+    padding: 2rem;
   }
-
   #welcome h1 {
     font-size: 2.5rem;
   }
@@ -189,12 +186,16 @@ main {
   margin: 0 2rem;
 }
 
+button {
+  font: inherit;
+}
+
 .talos-button {
+  font-family: "PT Sans", sans-serif;
   outline: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-family: sans-serif;
   font-size: 2rem;
   padding: 0;
   color: var(--dark-gray);
@@ -315,7 +316,8 @@ main {
   grid-template-columns: auto auto;
 }
 .service-image {
-  padding: 1rem;
+  font-size: 2rem;
+  padding: 0;
 }
 
 .service-title {
@@ -438,7 +440,190 @@ main {
   }
 }
 
+/* LATEST WORK */
+#latest-work {
+  background-color: var(--light-gray);
+  padding: 2rem;
+}
+
+.works {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: auto;
+  grid-gap: 2rem;
+}
+
+.works img {
+  width: 100%;
+}
+
+/* Tablet View */
+@media (min-width: 577px) {
+  .works {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .works {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+/* OUR BLOG */
+#our-blog {
+  padding: 2rem;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: auto;
+  grid-gap: 2rem;
+}
+
+.blog-item {
+  border: solid var(--light-gray) 2px;
+  border-radius: 7px;
+  padding: 2rem;
+  color: var(--dark-gray);
+}
+
+.blog-item h1 {
+  font-size: 2rem;
+}
+
+.blog-item h2,
+.blog-item h3 {
+  font-size: 1rem;
+}
+
+.blog-item h3 {
+  color: grey;
+}
+
+/* Tablet View */
+@media (min-width: 577px) {
+  .blog-list {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto auto;
+  }
+
+  .blog-item-primary {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .blog-list {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: auto;
+  }
+
+  .blog-item {
+    grid-column: 1 / 1;
+  }
+}
+
+/* ASKED QUESTIONS */
+/* Desktop View */
+/* Tablet View */
+@media (min-width: 577px) {
+}
+
+@media (min-width: 769px) {
+}
+
+/* TESTIMONIAL WORDS */
+/* Desktop View */
+/* Tablet View */
+@media (min-width: 577px) {
+}
+
+@media (min-width: 769px) {
+}
+
+/* GET IN TOUCH */
+#touch {
+  padding: 2rem;
+  background-color: var(--light-gray);
+}
+
+.touch-form {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 2rem;
+}
+
+.touch-form input {
+  background: transparent;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 1rem 1rem;
+}
+
+.touch-form textarea {
+  background: transparent;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 1rem 1rem;
+  height: 10rem;
+  font: inherit;
+}
+
+.touch-form button {
+  background: var(--page-green);
+  height: 3rem;
+  color: white;
+  border: 3px solid var(--page-green);
+  border-radius: 3px;
+}
+
+/* Tablet View */
+@media (min-width: 577px) {
+  #touch {
+    padding: 2rem 8rem;
+    background-color: var(--light-gray);
+  }
+
+  .touch-form {
+    display: grid;
+    grid-template-areas:
+      "name text"
+      "email text"
+      "phone text"
+      "button button";
+    grid-gap: 2rem;
+  }
+  .touch-form textarea {
+    grid-area: text;
+    height: 100%;
+  }
+  .touch-form button {
+    grid-area: button;
+    margin: 0 5rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+}
+
 /* FOOTER */
 footer {
   grid-area: footer;
+  padding: 10px;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(168, 168, 168, 0.5);
+  padding: 2rem;
+  box-shadow: b;
+}
+
+footer h1 {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--dark-gray);
 }
