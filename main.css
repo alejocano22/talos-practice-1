@@ -5,7 +5,7 @@
   --dark-gray: #575656;
   --subtitle-gray: #817f7f;
   --border-gray: #dfdbdb;
-  --light-gray: #faf6f6;
+  --light-gray: #f8f8f8;
 }
 
 * {
@@ -189,6 +189,7 @@ button {
   font-size: 2rem;
   font-weight: bold;
   margin-left: 1rem;
+  padding-left: 0;
   color: var(--dark-gray);
 }
 
@@ -319,13 +320,14 @@ button {
   color: var(--subtitle-gray);
 }
 
-/* CELPHONE 1REM, TABLET 3 REM, DESKTOP 5REM*/
-
 /* SERVICES VIEW */
+#what-we-do {
+  padding: 3rem 1rem;
+}
+
 #what-we-do .section-title,
 #what-we-do .section-subtitle {
   text-align: left;
-  margin: 0 1rem;
 }
 
 .service-list {
@@ -333,33 +335,46 @@ button {
   display: grid;
   grid-template-columns: auto;
   grid-gap: 2rem;
-  padding: 0;
-  margin: 2rem;
+  padding: 2rem 0 0 0;
 }
 
 .service-item {
   display: grid;
   grid-template-columns: auto auto;
 }
+
 .service-image {
   font-size: 2rem;
-  padding: 0;
+  padding: 1rem;
+  padding-left: 0;
+  color: var(--dark-gray);
 }
 
 .service-title {
   margin: 0;
   padding: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .service-description {
   grid-row-start: 2;
   grid-column-start: 2;
   margin: 0;
-  padding: 1rem;
+  padding: 0 1rem;
+  color: var(--subtitle-gray);
+}
+
+.service-description .highlighted {
+  color: var(--page-green);
 }
 
 /* Tablet View */
 @media (min-width: 577px) {
+  #what-we-do {
+    padding: 3rem 3rem;
+  }
+
   .service-list {
     grid-template-columns: auto auto;
   }
@@ -367,6 +382,10 @@ button {
 
 /* Desktop View */
 @media (min-width: 769px) {
+  #what-we-do {
+    padding: 3rem 5rem;
+  }
+
   .main-nav {
     display: flex;
   }
@@ -374,15 +393,6 @@ button {
   #welcome {
     height: 100vh;
   }
-
-  /* s.service-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 2rem;
-    padding: 0;
-    margin: 2rem;
-  } */
 }
 
 /* GENIUS STUDIO */
@@ -391,7 +401,7 @@ button {
   display: grid;
   grid-template-rows: auto 50vw;
   grid-gap: 2rem;
-  padding: 5rem 2rem;
+  padding: 3rem 1rem;
 }
 
 #genius-studio .section-subtitle,
@@ -404,10 +414,18 @@ button {
   height: 100%;
 }
 
+/* Tablet View */
+@media (min-width: 577px) {
+  #genius-studio {
+    padding: 3rem 3rem;
+  }
+}
+
 /* Desktop View */
 @media (min-width: 769px) {
   #genius-studio {
-    grid-template-columns: minmax(auto, 50vw) auto;
+    padding: 3rem 5rem;
+    grid-template-columns: minmax(auto, 50%) auto;
     grid-template-rows: auto;
   }
 
