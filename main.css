@@ -3,8 +3,9 @@
 :root {
   --page-green: #65c7b7;
   --dark-gray: #575656;
-  --light-gray: #faf6f6;
+  --subtitle-gray: #817f7f;
   --border-gray: #dfdbdb;
+  --light-gray: #faf6f6;
 }
 
 * {
@@ -15,10 +16,11 @@ body {
   font-family: "PT Sans", sans-serif;
   margin: 0;
   display: grid;
-  grid-template-rows: auto 4rem auto auto;
+  grid-template-rows: auto 4rem auto auto auto;
   grid-template-areas:
     "welcome"
     "header"
+    "mobile-nav"
     "main"
     "footer";
   height: 100%;
@@ -26,7 +28,6 @@ body {
 
 main {
   grid-area: main;
-  padding: 1rem;
 }
 
 /* WELCOME VIEW */
@@ -34,53 +35,54 @@ main {
   grid-area: welcome;
   display: flex;
   flex-direction: column;
+  background: url("./images/home-bg.jpg") center/cover no-repeat border-box;
   justify-content: center;
   align-items: center;
-  background: url("./images/home-bg-2.jpg") center/cover no-repeat border-box;
   width: 100vw;
   height: 50vh;
+  transition: background 1s ease-out;
 }
 
 #welcome h1 {
   color: white;
-  /* position: absolute; */
   display: block;
-  width: 100vw;
   text-align: center;
-  top: 40%;
   margin: 0;
+  margin-top: 3rem;
+  padding: 1rem;
   font-size: 2rem;
 }
 
 #welcome p {
   color: white;
-  /* position: absolute; */
   display: block;
   text-align: center;
-  width: 100vw;
   margin: 0;
-  padding: 2rem;
-  font-size: 1rem;
-  /* top: 42%; */
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+button {
+  font-family: "PT Sans", sans-serif;
 }
 
 .welcome-buttons {
-  /* position: absolute; */
   display: flex;
   width: 100vw;
   justify-content: center;
-  /* top: 70%; */
+  margin: 3rem 0;
 }
 
 .learn-button {
   outline: none;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
   background: transparent;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   border: solid white 2px;
   border-radius: 3px;
-  margin: 0 1rem;
 }
 
 .learn-button:hover,
@@ -96,108 +98,97 @@ main {
 .contact-button:hover,
 .contact-button:active {
   background-color: white;
-  border: solid white;
+  border: solid white 2px;
   color: var(--page-green);
 }
 
 /* Tablet View */
 @media (min-width: 577px) {
-  main {
-    padding: 2rem;
-  }
   #welcome h1 {
-    font-size: 2.5rem;
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+
+  #welcome p {
+    padding: 0 5rem;
+    font-size: 1rem;
   }
 
   .learn-button {
-    outline: none;
-    cursor: pointer;
-    background: transparent;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: solid white 2px;
-    border-radius: 3px;
-    margin: 0 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 0 0.5rem;
   }
 
   .contact-button {
     display: flex;
     outline: none;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     background: var(--page-green);
     color: white;
-    padding: 0.5rem 1rem;
-    border: solid var(--page-green);
+    padding: 0.5rem 2rem;
+    border: solid var(--page-green) 2px;
     border-radius: 3px;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
   }
 }
 
 /* Desktop View */
 @media (min-width: 769px) {
-  body {
-    background-color: white;
-  }
-
   #welcome {
     height: 100vh;
   }
 
   #welcome h1 {
-    font-size: 3rem;
+    font-size: 4rem;
+    margin: 0;
   }
 
   #welcome p {
     font-size: 1.5rem;
-  }
-  .welcome-buttons {
-    top: 60%;
+    padding: 1rem;
+    min-width: auto;
+    max-width: 60rem;
   }
 
   .learn-button {
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     border: solid white 4px;
-    margin: 0 1rem;
+    margin-top: 2rem;
   }
 
   .contact-button {
-    padding: 1rem 3rem;
+    padding: 1rem 4rem;
     border: solid var(--page-green);
     border-radius: 4px;
-    margin: 0 1rem;
+    margin-top: 2rem;
   }
 }
 
+/* HEADER - NAV BAR */
 .main-header {
   grid-area: header;
-  width: 100vw;
-  position: flex; /* sticky */
-  z-index: 2;
+  position: sticky;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 5px 0 black;
-}
-
-#mobile-header {
-  display: flex;
+  top: 0;
   width: 100%;
-  align-items: center;
-  margin: 0 2rem;
-}
-
-button {
-  font: inherit;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 2px 2px 2px var(--light-gray);
+  z-index: 60;
 }
 
 .talos-button {
-  font-family: "PT Sans", sans-serif;
   outline: none;
-  background-color: transparent;
   border: none;
   cursor: pointer;
+  background-color: transparent;
   font-size: 2rem;
-  padding: 0;
+  font-weight: bold;
+  margin-left: 1rem;
   color: var(--dark-gray);
 }
 
@@ -208,28 +199,26 @@ button {
 
 .burguer-button {
   outline: none;
-  width: 3rem;
-  background: transparent;
   border: none;
   cursor: pointer;
-  padding-top: 0;
-  padding-bottom: 0;
-  vertical-align: middle;
-  margin-right: 1rem;
+  background: transparent;
+  width: 2.5rem;
   margin-left: auto;
+  margin-right: 1rem;
 }
 
 .burguer-button__bar {
   width: 100%;
-  height: 0.3rem;
+  height: 2px;
   background: var(--page-green);
   display: block;
   margin: 0.4rem 0;
 }
 
-.main-nav a {
+.main-nav a,
+.mobile-nav a {
   text-decoration: none;
-  color: black;
+  color: var(--dark-gray);
 }
 
 .main-nav {
@@ -237,20 +226,51 @@ button {
 }
 
 .main-nav__item a:hover,
-.main-nav__item a:active {
+.main-nav__item a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
   color: var(--page-green);
 }
 
-/* HEADER VIEW */
+.mobile-nav {
+  grid-area: mobile-nav;
+  display: none;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 2px var(--light-gray);
+}
+
+.mobile-nav-open {
+  display: flex;
+}
+
+.mobile-nav__items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
 /* Tablet View */
 @media (min-width: 577px) {
-  #mobile-header {
-    margin: 0;
-    margin-left: 2rem;
+  .mobile-nav {
+    display: none;
   }
 
   .burguer-button {
     display: none;
+  }
+
+  .talos-button {
+    margin-left: 3rem;
   }
 
   .main-nav {
@@ -259,27 +279,31 @@ button {
   }
 
   .main-nav__items {
-    margin: 0 2rem;
-    margin-left: auto;
-    padding: 0;
     list-style: none;
     display: flex;
+    margin-right: 3rem;
+    margin-left: auto;
+    padding: 0;
   }
 
   .main-nav__item {
-    margin: 0 0.5rem;
-    font-size: 0.8rem;
+    margin: 0 0.4rem;
+    font-size: 0.9rem;
   }
 }
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #welcome {
-    height: 100vh;
+  .talos-button {
+    margin-left: 5rem;
+  }
+
+  .main-nav__items {
+    margin-right: 5rem;
   }
 
   .main-nav__item {
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     font-size: 1rem;
   }
 }
@@ -292,14 +316,16 @@ button {
 .section-subtitle {
   text-align: center;
   font-size: 1rem;
-  color: gray;
+  color: var(--subtitle-gray);
 }
+
+/* CELPHONE 1REM, TABLET 3 REM, DESKTOP 5REM*/
 
 /* SERVICES VIEW */
 #what-we-do .section-title,
 #what-we-do .section-subtitle {
   text-align: left;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
 .service-list {
