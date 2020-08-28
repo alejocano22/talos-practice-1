@@ -178,7 +178,7 @@ button {
   height: 100%;
   background: white;
   box-shadow: 2px 2px 2px 2px var(--light-gray);
-  z-index: 60;
+  z-index: 2;
 }
 
 .talos-button {
@@ -425,7 +425,7 @@ button {
 @media (min-width: 769px) {
   #genius-studio {
     padding: 3rem 5rem;
-    grid-template-columns: minmax(auto, 50%) auto;
+    grid-template-columns: minmax(auto, 40vw) auto;
     grid-template-rows: auto;
   }
 
@@ -439,7 +439,7 @@ button {
 
 /* TEAM MEMBER */
 #team-member {
-  padding: 2rem;
+  padding: 3rem 1rem;
 }
 
 #team-member ul {
@@ -450,7 +450,7 @@ button {
   display: grid;
   list-style: none;
   grid-template-columns: auto;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 2rem;
 }
 
@@ -460,11 +460,42 @@ button {
   align-items: center;
 }
 
-.member-img {
-  width: 100%;
-  height: auto;
+.member-box {
+  display: flex;
+  position: relative;
+  flex-direction: column-reverse;
+  height: 100%;
 }
 
+.member-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.member-bar {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.member-bar-open {
+  opacity: 1;
+}
+
+.member-icon {
+  font-size: 3rem;
+  margin: 0.5rem;
+  background: transparent;
+  color: black;
+}
+
+.member-name {
+  font-weight: bold;
+}
 .member-job {
   margin: 0;
 }

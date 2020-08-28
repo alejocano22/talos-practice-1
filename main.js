@@ -1,6 +1,8 @@
 const welcomeImage = document.getElementById('welcome');
 const burguerButton = document.querySelector('.burguer-button');
 const mobileNav = document.querySelector('.mobile-nav');
+const memberBar = document.querySelectorAll('.member-bar');
+const memberBox = document.querySelectorAll('.member-box');
 
 const welcomeImages = [];
 let imageIndex = 0;
@@ -23,3 +25,18 @@ burguerButton.addEventListener('click', () => {
     mobileNav.classList.add('mobile-nav-open');
   }
 });
+
+function handleMemberBar() {
+  for (let i = 0; i < memberBox.length; i += 1) {
+    memberBox[i].addEventListener('mouseenter', () => {
+      memberBar[i].classList.add('member-bar-open');
+      console.log('in');
+    });
+    memberBox[i].addEventListener('mouseleave', () => {
+      memberBar[i].classList.remove('member-bar-open');
+      console.log('out');
+    });
+  }
+}
+
+handleMemberBar();
