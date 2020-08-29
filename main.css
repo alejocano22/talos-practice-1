@@ -891,7 +891,7 @@ button {
 /* Desktop View */
 @media (min-width: 769px) {
   #touch {
-    padding: 3rem 10rem;
+    padding: 5rem 10rem;
   }
 
   .touch-form {
@@ -906,13 +906,45 @@ button {
 /* FOOTER */
 footer {
   grid-area: footer;
-  padding: 10px;
-  box-shadow: 1rem 1rem 1rem 1rem var(--border-gray);
-  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1.5rem;
 }
 
-footer h1 {
+footer p {
   font-size: 1rem;
   text-align: center;
   color: var(--dark-gray);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin: 0.3rem;
+  font-size: 1rem;
+  background: black;
+  color: white;
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  .footer-icon {
+    width: 3rem;
+    height: 3rem;
+    padding-top: 0.8rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
