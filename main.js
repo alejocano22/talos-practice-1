@@ -5,6 +5,8 @@ const memberBar = document.querySelectorAll('.member-bar');
 const memberBox = document.querySelectorAll('.member-box');
 const workBox = document.querySelectorAll('.work-modal');
 const workModal = document.querySelectorAll('.work-modal');
+const questions = document.querySelectorAll('.question');
+const answers = document.querySelectorAll('.answer');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -51,6 +53,27 @@ function handleWorkModal() {
   }
 }
 
+// To hide all answers
+function hideAnswers() {
+  answers.forEach((answer) => {
+    answer.classList.remove('show-answer');
+  });
+}
+
+// To display/close an answer
+function displayAnswer() {
+  for (let i = 0; i < questions.length; i += 1) {
+    questions[i].addEventListener('click', () => {
+      if (answers[i].classList.contains('show-answer')) {
+        answers[i].classList.remove('show-answer');
+      } else {
+        hideAnswers();
+        answers[i].classList.add('show-answer');
+      }
+    });
+  }
+}
+
 // Call change welcome image
 setInterval(changeWelcomeImage, 4000);
 
@@ -59,3 +82,6 @@ handleMemberBar();
 
 // Call display work modal
 handleWorkModal();
+
+// Call display answer
+displayAnswer();

@@ -757,7 +757,7 @@ button {
 /* Desktop View */
 @media (min-width: 769px) {
   #our-blog {
-    padding: 0 5rem;
+    padding: 5rem 5rem;
   }
 
   .blog-list {
@@ -789,12 +789,70 @@ button {
 }
 
 /* ASKED QUESTIONS */
+#questions {
+  padding: 3rem 1rem;
+  background-color: var(--light-gray);
+}
+
+.questions-list {
+  list-style: none;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+}
+
+.question-item {
+  border-radius: 5px;
+  background: white;
+}
+
+.question-icon {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: var(--dark-gray);
+}
+
+.question {
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.answer {
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0 2rem;
+  border-radius: 0 0 4px 4px;
+  color: var(--subtitle-gray);
+  transition: all 0.3s linear;
+}
+
+.show-answer {
+  height: 15rem;
+  padding: 1rem 2rem;
+}
+
 /* Desktop View */
 /* Tablet View */
 @media (min-width: 577px) {
+  #questions {
+    padding: 3rem 3rem;
+  }
+  .show-answer {
+    height: 10rem;
+  }
 }
 
 @media (min-width: 769px) {
+  #questions {
+    padding: 3rem 5rem;
+  }
+
+  .answer {
+    font-size: 1.2rem;
+  }
 }
 
 /* TESTIMONIAL WORDS */
