@@ -7,6 +7,9 @@ const workBox = document.querySelectorAll('.work-modal');
 const workModal = document.querySelectorAll('.work-modal');
 const questions = document.querySelectorAll('.question');
 const answers = document.querySelectorAll('.answer');
+const testimonialButtons = document.querySelectorAll('.testimonial-buttons button');
+const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
+const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -74,6 +77,51 @@ function displayAnswer() {
   }
 }
 
+// To hide all slides and active buttons mobile
+function hideAllTestimonialSlidesMobile() {
+  testimonialSlideItems.forEach((slide) => {
+    slide.classList.remove('show-slide-mobile');
+  });
+  testimonialButtonsMobile.forEach((button) => {
+    button.classList.remove('testimonial-button-active');
+  });
+}
+
+// To display slide mobile
+function displayTestimonialSlideMobile() {
+  for (let i = 0; i < testimonialButtonsMobile.length; i += 1) {
+    testimonialButtonsMobile[i].addEventListener('click', () => {
+      hideAllTestimonialSlidesMobile();
+      testimonialSlideItems[i].classList.add('show-slide-mobile');
+      testimonialButtonsMobile[i].classList.add('testimonial-button-active');
+    });
+  }
+}
+
+// To hide all slides and active buttons (Tablet and Desktop)
+function hideAllTestimonialSlides() {
+  testimonialSlideItems.forEach((slide) => {
+    slide.classList.remove('show-slide');
+  });
+  testimonialButtons.forEach((button) => {
+    button.classList.remove('testimonial-button-active');
+  });
+}
+
+// To display slide (Tablet and Desktop)
+function displayTestimonialSlide() {
+  for (let i = 0; i < testimonialButtons.length; i += 1) {
+    testimonialButtons[i].addEventListener('click', () => {
+      hideAllTestimonialSlides();
+      testimonialSlideItems[i * 2].classList.add('show-slide');
+      testimonialSlideItems[(i * 2) + 1].classList.add('show-slide');
+      testimonialButtons[i].classList.add('testimonial-button-active');
+    });
+  }
+}
+
+displayTestimonialSlide();
+
 // Call change welcome image
 setInterval(changeWelcomeImage, 4000);
 
@@ -85,3 +133,9 @@ handleWorkModal();
 
 // Call display answer
 displayAnswer();
+
+// Call display slide mobile
+displayTestimonialSlideMobile();
+
+// Call display slide (Tablet and Desktop)
+displayTestimonialSlide();
