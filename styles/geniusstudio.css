@@ -1,9 +1,11 @@
 /* GENIUS STUDIO */
 #genius-studio {
   padding: 3rem 1rem;
-  display: grid;
-  grid-template-rows: auto 50vw;
-  grid-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*grid-template-rows: auto 50vw;
+  grid-gap: 2rem; */
   background-color: var(--light-gray);
 }
 
@@ -14,7 +16,7 @@
 
 .genius-video {
   width: 100%;
-  height: 100%;
+  height: 20rem;
 }
 
 /* Tablet View */
@@ -27,15 +29,20 @@
 /* Desktop View */
 @media (min-width: 769px) {
   #genius-studio {
-    padding: 3rem 5rem;
-    grid-template-columns: minmax(auto, 40vw) auto;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8rem 5rem;
+  }
+
+  #genius-studio p {
+    max-width: 40rem;
+    padding-right: 2rem;
   }
 
   .genius-video {
-    position: relative;
     width: 50vw;
-    max-width: 500px;
-    height: 100%;
+    max-width: 40rem;
+    height: 20rem;
   }
 }

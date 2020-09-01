@@ -1,5 +1,8 @@
 /* LATEST WORK */
 #latest-work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 3rem 1rem;
   background-color: var(--light-gray);
 }
@@ -108,10 +111,11 @@
 /* Desktop View */
 @media (min-width: 769px) {
   #latest-work {
-    padding: 3rem 5rem;
+    padding: 8rem 5rem;
   }
 
   .work-list {
+    max-width: 80rem;
     grid-template-columns: auto auto auto;
     grid-template-rows: repeat(2, auto);
   }

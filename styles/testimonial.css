@@ -1,5 +1,8 @@
 /* TESTIMONIAL WORDS */
 #testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 3rem 1rem;
 }
 
@@ -108,7 +111,11 @@
 /* Desktop View */
 @media (min-width: 769px) {
   #testimonial {
-    padding: 3rem 5rem;
+    padding: 8rem 5rem;
+  }
+
+  .testimonial-slides {
+    max-width: 80rem;
   }
 
   .testimonial-message p {

@@ -307,6 +307,10 @@ button {
 
 /* Desktop View */
 @media (min-width: 769px) {
+  .nav-bar {
+    max-width: 80rem;
+  }
+
   .talos-button {
     margin-left: 5rem;
   }
@@ -322,12 +326,13 @@ button {
 }
 
 .section-title {
+  margin: 0;
   text-align: center;
   font-size: 2rem;
 }
 
 .section-subtitle {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   color: var(--subtitle-gray);
   text-align: center;
   font-size: 1rem;

@@ -1,5 +1,8 @@
 /* OUR BLOG */
 #our-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 3rem 1rem;
 }
 
@@ -55,7 +58,7 @@
 /* Tablet View */
 @media (min-width: 577px) {
   #our-blog {
-    padding: 0 3rem;
+    padding: 3rem 3rem;
   }
 
   .blog-list {
@@ -85,12 +88,13 @@
 /* Desktop View */
 @media (min-width: 769px) {
   #our-blog {
-    padding: 5rem 5rem;
+    padding: 8rem 5rem;
   }
 
   .blog-list {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
+    max-width: 80rem;
   }
 
   .blog-item {

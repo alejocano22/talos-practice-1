@@ -83,7 +83,7 @@
 /* Desktop View */
 @media (min-width: 769px) {
   #touch {
-    padding: 5rem 10rem;
+    padding: 8rem 10rem;
   }
 
   .touch-form {

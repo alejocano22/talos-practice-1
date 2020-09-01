@@ -1,5 +1,8 @@
 /* ASKED QUESTIONS */
 #questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 3rem 1rem;
   background-color: var(--light-gray);
 }
@@ -58,7 +61,15 @@
 /* Desktop View */
 @media (min-width: 769px) {
   #questions {
-    padding: 3rem 5rem;
+    padding: 8rem 5rem;
+  }
+
+  .questions-list {
+    max-width: 80rem;
+  }
+
+  .show-answer {
+    height: 12rem;
   }
 
   .answer {
