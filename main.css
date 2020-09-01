@@ -18,11 +18,11 @@ body {
   font-family: "PT Sans", sans-serif;
   margin: 0;
   display: grid;
-  grid-template-rows: auto 4rem auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
     "welcome"
     "header"
-    "mobile-nav"
+    /* "mobile-nav" */
     "main"
     "footer";
   height: 100%;
@@ -174,13 +174,22 @@ button {
   grid-area: header;
   position: sticky;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  /* height: 100%; */
+  background: white;
+  box-shadow: 2px 2px 2px 2px var(--light-gray);
+  z-index: 2;
+}
+
+.nav-bar {
+  display: flex;
   align-items: center;
   top: 0;
   width: 100%;
   height: 100%;
-  background: white;
-  box-shadow: 2px 2px 2px 2px var(--light-gray);
-  z-index: 2;
 }
 
 .talos-button {
@@ -210,7 +219,7 @@ button {
   margin-right: 1rem;
 }
 
-.burguer-button__bar {
+.burguer-button-bar {
   width: 100%;
   height: 2px;
   background: var(--page-green);
@@ -228,15 +237,16 @@ button {
   display: none;
 }
 
-.main-nav__item a:hover,
-.main-nav__item a:active,
-.mobile-nav__item a:hover,
-.mobile-nav__item a:active {
+.main-nav-item a:hover,
+.main-nav-item a:active,
+.mobile-nav-item a:hover,
+.mobile-nav-item a:active {
   color: var(--page-green);
 }
 
 .mobile-nav {
-  grid-area: mobile-nav;
+  /* grid-area: mobile-nav; */
+  width: 100%;
   display: none;
   justify-content: center;
   box-shadow: 2px 2px 2px 2px var(--light-gray);
@@ -246,7 +256,7 @@ button {
   display: flex;
 }
 
-.mobile-nav__items {
+.mobile-nav-items {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -256,7 +266,7 @@ button {
   justify-content: center;
 }
 
-.mobile-nav__item {
+.mobile-nav-item {
   margin: 1rem 0;
   font-size: 0.9rem;
   font-weight: bold;
@@ -281,7 +291,7 @@ button {
     width: 100%;
   }
 
-  .main-nav__items {
+  .main-nav-items {
     list-style: none;
     display: flex;
     margin-right: 3rem;
@@ -289,7 +299,7 @@ button {
     padding: 0;
   }
 
-  .main-nav__item {
+  .main-nav-item {
     margin: 0 0.4rem;
     font-size: 0.9rem;
   }
@@ -301,11 +311,11 @@ button {
     margin-left: 5rem;
   }
 
-  .main-nav__items {
+  .main-nav-items {
     margin-right: 5rem;
   }
 
-  .main-nav__item {
+  .main-nav-item {
     margin: 0 1rem;
     font-size: 1rem;
   }
@@ -909,6 +919,7 @@ button {
 .testimonial-buttons-mobile button,
 .testimonial-buttons button {
   outline: none;
+  cursor: pointer;
   width: 0.8rem;
   height: 0.8rem;
   background: var(--page-green);
