@@ -1,0 +1,41 @@
+/* GENIUS STUDIO */
+#genius-studio {
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-rows: auto 50vw;
+  grid-gap: 2rem;
+  background-color: var(--light-gray);
+}
+
+#genius-studio .section-subtitle,
+#genius-studio .section-title {
+  text-align: left;
+}
+
+.genius-video {
+  width: 100%;
+  height: 100%;
+}
+
+/* Tablet View */
+@media (min-width: 577px) {
+  #genius-studio {
+    padding: 3rem 3rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  #genius-studio {
+    padding: 3rem 5rem;
+    grid-template-columns: minmax(auto, 40vw) auto;
+    grid-template-rows: auto;
+  }
+
+  .genius-video {
+    position: relative;
+    width: 50vw;
+    max-width: 500px;
+    height: 100%;
+  }
+}
