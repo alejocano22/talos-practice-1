@@ -1,4 +1,6 @@
 const welcomeImage = document.getElementById('welcome');
+const mainNavItems = document.querySelectorAll('.main-nav-item a');
+const sections = document.querySelectorAll('section');
 const burguerButton = document.querySelector('.burguer-button');
 const mobileNav = document.querySelector('.mobile-nav');
 const memberBar = document.querySelectorAll('.member-bar');
@@ -120,7 +122,64 @@ function displayTestimonialSlide() {
   }
 }
 
-displayTestimonialSlide();
+// To hide all active buttons in the nav bar
+function hideAllNavActive() {
+  mainNavItems.forEach((button) => {
+    button.classList.remove('nav-item-active');
+  });
+}
+
+const options = {
+  root: null,
+  threshold: 0.50,
+  rootMargin: '0px',
+};
+
+// To observe all sections in the screen
+const observer = new IntersectionObserver(((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    switch (entry.target.id) {
+      case 'welcome':
+        hideAllNavActive();
+        mainNavItems[0].classList.add('nav-item-active');
+        break;
+      case 'what-we-do':
+        hideAllNavActive();
+        mainNavItems[1].classList.add('nav-item-active');
+        break;
+      case 'genius-studio':
+        hideAllNavActive();
+        mainNavItems[2].classList.add('nav-item-active');
+        break;
+      case 'team-member':
+        hideAllNavActive();
+        mainNavItems[3].classList.add('nav-item-active');
+        break;
+      case 'latest-work':
+        hideAllNavActive();
+        mainNavItems[4].classList.add('nav-item-active');
+        break;
+      case 'our-blog':
+        hideAllNavActive();
+        mainNavItems[5].classList.add('nav-item-active');
+        break;
+      case 'touch':
+        hideAllNavActive();
+        mainNavItems[6].classList.add('nav-item-active');
+        break;
+      default:
+        break;
+    }
+  });
+}), options);
+
+// Observe each section
+sections.forEach((section) => {
+  observer.observe(section);
+});
 
 // Call change welcome image
 setInterval(changeWelcomeImage, 4000);
