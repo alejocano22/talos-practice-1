@@ -59,26 +59,26 @@
   cursor: pointer;
   padding: 2rem;
   border-radius: 50%;
-  border: white;
-  background-color: white;
+  border: var(--page-white);
+  background: var(--page-white);
   font-size: 2rem;
   font-weight: bold;
   color: var(--page-green);
   transform: rotateY(180deg);
 }
 
-.work-modal h1 {
+.work-modal-title {
   margin-bottom: 1rem;
   padding: 0 1rem;
-  color: white;
+  color: var(--page-white);
   font-size: 2.5rem;
 }
 
-.work-modal h2 {
+.work-modal-subtitle {
   margin: 0;
   padding: 0 1rem;
   text-align: center;
-  color: white;
+  color: var(--page-white);
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -99,11 +99,11 @@
     padding: 1rem;
   }
 
-  .work-modal h1 {
+  .work-modal-title {
     font-size: 1.5rem;
   }
 
-  .work-modal h2 {
+  .work-modal-subtitle {
     font-size: 1rem;
   }
 }
@@ -125,11 +125,11 @@
     padding: 2rem;
   }
 
-  .work-modal h1 {
+  .work-modal-title {
     font-size: 2.5rem;
   }
 
-  .work-modal h2 {
+  .work-modal-subtitle {
     font-size: 1.5rem;
   }
 }

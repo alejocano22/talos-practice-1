@@ -17,7 +17,7 @@
   padding: 2rem;
   border: solid var(--border-gray) 2px;
   border-radius: 7px;
-  background: white;
+  background: var(--page-white);
   color: var(--dark-gray);
 }
 
@@ -37,21 +37,21 @@
   }
 }
 
-.blog-item h1 {
+.blog-item-comment {
   margin: 0;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   font-size: 2rem;
 }
 
-.blog-item h2,
-.blog-item h3 {
+.blog-item-author,
+.blog-item-date {
   font-size: 1rem;
   margin: 0;
   color: var(--dark-gray);
 }
 
-.blog-item h3 {
+.blog-item-date {
   color: var(--subtitle-gray);
 }
 
@@ -75,12 +75,12 @@
     animation: animation 25s linear infinite;
   }
 
-  .blog-item h1 {
+  .blog-item-comment {
     font-size: 1.5rem;
   }
 
-  .blog-item h2,
-  .blog-item h3 {
+  .blog-item-author,
+  .blog-item-date {
     font-size: 0.8rem;
   }
 }
@@ -110,12 +110,12 @@
     grid-area: auto;
   }
 
-  .blog-item h1 {
+  .blog-item-comment {
     font-size: 2rem;
   }
 
-  .blog-item h2,
-  .blog-item h3 {
+  .blog-item-author,
+  .blog-item-date {
     font-size: 1rem;
   }
 }
