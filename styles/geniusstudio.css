@@ -4,14 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*grid-template-rows: auto 50vw;
-  grid-gap: 2rem; */
   background-color: var(--light-gray);
 }
 
 #genius-studio .section-subtitle,
 #genius-studio .section-title {
   text-align: left;
+}
+
+#genius-studio p {
+  line-height: 1.5rem;
 }
 
 .genius-video {

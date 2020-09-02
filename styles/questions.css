@@ -40,6 +40,7 @@
   border-radius: 0 0 4px 4px;
   color: var(--subtitle-gray);
   transition: all 0.3s linear;
+  line-height: 1.5rem;
 }
 
 .show-answer {
@@ -69,10 +70,6 @@
   }
 
   .show-answer {
-    height: 12rem;
-  }
-
-  .answer {
-    font-size: 1.2rem;
+    height: 10rem;
   }
 }

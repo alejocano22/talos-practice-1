@@ -70,6 +70,8 @@
 
 .member-job {
   margin: 0;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
 }
 
 /* Tablet View */

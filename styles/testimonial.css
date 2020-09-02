@@ -29,6 +29,7 @@
 
 .testimonial-message {
   padding: 0 1rem;
+  line-height: 1.5rem;
 }
 
 .testimonial-message p {
@@ -118,11 +119,7 @@
     max-width: 80rem;
   }
 
-  .testimonial-message p {
-    font-size: 1.2rem;
-  }
-
   .testimonial-message h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }

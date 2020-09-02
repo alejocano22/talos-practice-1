@@ -12,6 +12,7 @@ const answers = document.querySelectorAll('.answer');
 const testimonialButtons = document.querySelectorAll('.testimonial-buttons button');
 const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
+const touchForm = document.querySelector('.touch-form');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -121,6 +122,11 @@ function displayTestimonialSlide() {
     });
   }
 }
+
+// To prevent default in the touch form
+touchForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+});
 
 // To hide all active buttons in the nav bar
 function hideAllNavActive() {
