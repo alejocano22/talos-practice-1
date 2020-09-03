@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 const welcomeImage = document.getElementById('welcome');
 const mainNavItems = document.querySelectorAll('.main-nav-item');
 const sections = document.querySelectorAll('section');
-const burguerButton = document.querySelector('.burguer-button');
 const mobileNav = document.querySelector('.mobile-nav');
 const memberBar = document.querySelectorAll('.member-bar');
 const memberBox = document.querySelectorAll('.member-box');
@@ -17,8 +17,8 @@ const touchForm = document.querySelector('.touch-form');
 // Array of welcome images
 const welcomeImages = [];
 let imageIndex = 0;
-welcomeImages[0] = 'url("./images/home-bg.jpg") center/cover no-repeat border-box';
-welcomeImages[1] = 'url("./images/home-bg-2.jpg") center/cover no-repeat border-box';
+welcomeImages[0] = 'url("images/home-bg.jpg") center/cover no-repeat border-box';
+welcomeImages[1] = 'url("images/home-bg-2.jpg") center/cover no-repeat border-box';
 
 // To change welcome image
 function changeWelcomeImage() {
@@ -27,13 +27,13 @@ function changeWelcomeImage() {
 }
 
 // To open/close mobile nav bar
-burguerButton.addEventListener('click', () => {
+function handleMobileBar() {
   if (mobileNav.classList.contains('mobile-nav-open')) {
     mobileNav.classList.remove('mobile-nav-open');
   } else {
     mobileNav.classList.add('mobile-nav-open');
   }
-});
+}
 
 // To display member bar
 function handleMemberBar() {

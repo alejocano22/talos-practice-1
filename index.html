@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Design Practice</title>
-    <link rel="icon" href="./images/page-icon.png">
-    <link rel="stylesheet" href="./icons/style.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/services.css" />
-    <link rel="stylesheet" href="./styles/geniusstudio.css" />
-    <link rel="stylesheet" href="./styles/member.css" />
-    <link rel="stylesheet" href="./styles/work.css" />
-    <link rel="stylesheet" href="./styles/blog.css" />
-    <link rel="stylesheet" href="./styles/questions.css" />
-    <link rel="stylesheet" href="./styles/testimonial.css" />
-    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="icon" href="images/page-icon.png">
+    <link rel="stylesheet" href="icons/style.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <link rel="stylesheet" href="styles/geniusstudio.css" />
+    <link rel="stylesheet" href="styles/member.css" />
+    <link rel="stylesheet" href="styles/work.css" />
+    <link rel="stylesheet" href="styles/blog.css" />
+    <link rel="stylesheet" href="styles/questions.css" />
+    <link rel="stylesheet" href="styles/testimonial.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body>
     <section id="welcome">
@@ -31,7 +31,7 @@
     <header class="main-header">
       <div class="nav-bar">
         <button class="talos-button">Talos</button>
-        <button class="burguer-button">
+        <button class="burguer-button" onclick="handleMobileBar()">
           <span class="burguer-button-bar"></span>
           <span class="burguer-button-bar"></span>
           <span class="burguer-button-bar"></span>
@@ -171,14 +171,14 @@
                 <div class="member-icon icon-dribbble-2"></div>
                 <div class="member-icon icon-behance-2"></div>
               </div>
-              <img src="./images/team_1.jpg" alt="team-1" />
+              <img src="images/team_1.jpg" alt="team-1" />
             </div>
             <p class="member-name">Johnathan Doe</p>
             <p class="member-job">Designer</p>
           </li>
           <li class="member">
             <div class="member-box">
-              <img src="./images/team_2.jpg" alt="team-2" />
+              <img src="images/team_2.jpg" alt="team-2" />
               <div class="member-bar">
                 <div class="member-icon icon-facebok-2"></div>
                 <div class="member-icon icon-twitter-2"></div>
@@ -191,7 +191,7 @@
           </li>
           <li class="member">
             <div class="member-box">
-              <img src="./images/team_3.jpg" alt="team-1" />
+              <img src="images/team_3.jpg" alt="team-1" />
               <div class="member-bar">
                 <div class="member-icon icon-facebok-2"></div>
                 <div class="member-icon icon-twitter-2"></div>
@@ -217,7 +217,7 @@
                 <h1 class="work-modal-title">Illustration</h1>
                 <h1 class="work-modal-subtitle">Graphic / Illustration / Poster</h1>
               </div>
-              <img src="./images/portfolio-img1.jpg" alt="portfolio-1" />
+              <img src="images/portfolio-img1.jpg" alt="portfolio-1" />
             </div>
           </li>
           <li class="work-item">
@@ -227,7 +227,7 @@
                 <h1 class="work-modal-title">Illustration</h1>
                 <h1 class="work-modal-subtitle">Graphic / Illustration / Poster</h1>
               </div>
-              <img src="./images/portfolio-img2.jpg" alt="portfolio-2" />
+              <img src="images/portfolio-img2.jpg" alt="portfolio-2" />
             </div>
           </li>
           <li class="work-item">
@@ -237,7 +237,7 @@
                 <h1 class="work-modal-title">Illustration</h1>
                 <h1 class="work-modal-subtitle">Graphic / Illustration / Poster</h1>
               </div>
-              <img src="./images/portfolio-img3.jpg" alt="portfolio-3" />
+              <img src="images/portfolio-img3.jpg" alt="portfolio-3" />
             </div>
           </li>
           <li class="work-item">
@@ -247,7 +247,7 @@
                 <h1 class="work-modal-title">Illustration</h1>
                 <h1 class="work-modal-subtitle">Graphic / Illustration / Poster</h1>
               </div>
-              <img src="./images/portfolio-img4.jpg" alt="portfolio-4" />
+              <img src="images/portfolio-img4.jpg" alt="portfolio-4" />
             </div>
           </li>
           <li class="work-item">
@@ -257,7 +257,7 @@
                 <h1 class="work-modal-title">Illustration</h1>
                 <h1 class="work-modal-subtitle">Graphic / Illustration / Poster</h1>
               </div>
-              <img src="./images/portfolio-img5.jpg" alt="portfolio-5" />
+              <img src="images/portfolio-img5.jpg" alt="portfolio-5" />
             </div>
           </li>
           <li class="work-item">
@@ -267,7 +267,7 @@
                 <h1 class="work-modal-title">Illustration</h1>
                 <h1 class="work-modal-subtitle">Graphic / Illustration / Poster</h1>
               </div>
-              <img src="./images/portfolio-img6.jpg" alt="portfolio-6" />
+              <img src="images/portfolio-img6.jpg" alt="portfolio-6" />
             </div>
           </li>
         </ul>
@@ -360,7 +360,7 @@
             class="testimonial-slide-item show-slide-mobile show-slide">
             <img
               class="testimonial-image"
-              src="./images/testimonial-img1.jpg"
+              src="images/testimonial-img1.jpg"
               alt="testimonial-image-1"/>
             <div class="testimonial-message">
               <p>
@@ -375,7 +375,7 @@
           <div id="testimonial-2" class="testimonial-slide-item show-slide">
             <img
               class="testimonial-image"
-              src="./images/testimonial-img2.jpg"
+              src="images/testimonial-img2.jpg"
               alt="testimonial-image-2"/>
             <div class="testimonial-message">
               <p>
@@ -390,7 +390,7 @@
           <div id="testimonial-3" class="testimonial-slide-item">
             <img
               class="testimonial-image"
-              src="./images/testimonial-img3.jpg"
+              src="images/testimonial-img3.jpg"
               alt="testimonial-image-3"/>
             <div class="testimonial-message">
               <p>
@@ -405,7 +405,7 @@
           <div id="testimonial-4" class="testimonial-slide-item">
             <img
               class="testimonial-image"
-              src="./images/testimonial-img1.jpg"
+              src="images/testimonial-img1.jpg"
               alt="testimonial-image-4"/>
             <div class="testimonial-message">
               <p>
@@ -420,7 +420,7 @@
           <div id="testimonial-5" class="testimonial-slide-item">
             <img
               class="testimonial-image"
-              src="./images/testimonial-img2.jpg"
+              src="images/testimonial-img2.jpg"
               alt="testimonial-image-5"/>
             <div class="testimonial-message">
               <p>
@@ -477,5 +477,5 @@
       </div>
     </footer>
   </body>
-  <script src="./scripts/main.js"></script>
+  <script src="scripts/main.js"></script>
 </html>
