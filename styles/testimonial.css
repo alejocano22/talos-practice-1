@@ -53,8 +53,8 @@
   padding: 5rem 0;
 }
 
-.testimonial-buttons-mobile button,
-.testimonial-buttons button {
+.testimonial-button,
+.testimonial-button {
   outline: none;
   cursor: pointer;
   background: var(--page-green);
@@ -67,7 +67,7 @@
 }
 
 .testimonial-button-active {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .testimonial-buttons {

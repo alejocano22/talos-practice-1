@@ -1,5 +1,5 @@
 const welcomeImage = document.getElementById('welcome');
-const mainNavItems = document.querySelectorAll('.main-nav-item a');
+const mainNavItems = document.querySelectorAll('.main-nav-item');
 const sections = document.querySelectorAll('section');
 const burguerButton = document.querySelector('.burguer-button');
 const mobileNav = document.querySelector('.mobile-nav');

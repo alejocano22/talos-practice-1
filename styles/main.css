@@ -22,23 +22,11 @@ html {
 body {
   font-family: "PT Sans", sans-serif;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto auto auto auto auto;
-  grid-template-areas:
-    "welcome"
-    "header"
-    "main"
-    "footer";
   height: 100%;
-}
-
-main {
-  grid-area: main;
 }
 
 /* WELCOME */
 #welcome {
-  grid-area: welcome;
   display: flex;
   flex-direction: column;
   background: url("../images/home-bg.jpg") center/cover no-repeat border-box;
@@ -177,7 +165,6 @@ main {
 
 /* HEADER - NAV BAR */
 .main-header {
-  grid-area: header;
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -250,8 +237,8 @@ main {
   color: var(--page-green);
 }
 
-.nav-item-active {
-  color: var(--page-green) !important;
+.nav-item-active a {
+  color: var(--page-green);
 }
 
 .mobile-nav {
@@ -349,7 +336,6 @@ main {
 
 /* FOOTER */
 footer {
-  grid-area: footer;
   display: flex;
   flex-direction: column;
   padding: 3rem 1.5rem;
