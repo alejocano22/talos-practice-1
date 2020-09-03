@@ -64,14 +64,14 @@
 
 .member-name {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .member-job {
   margin: 0;
   letter-spacing: 0.1rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* Tablet View */

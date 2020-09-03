@@ -62,7 +62,7 @@
   border: var(--page-white);
   background: var(--page-white);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--page-green);
   transform: rotateY(180deg);
 }
@@ -79,7 +79,7 @@
   padding: 0 1rem;
   text-align: center;
   color: var(--page-white);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 

@@ -84,7 +84,7 @@ main {
   background: transparent;
   color: var(--page-white);
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0.1rem;
 }
 
@@ -127,7 +127,7 @@ main {
     background: var(--page-green);
     color: var(--page-white);
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 0.1rem;
   }
 
@@ -201,12 +201,13 @@ main {
   outline: none;
   border: none;
   cursor: pointer;
+  font-family: inherit;
   margin-left: 1rem;
   padding-left: 0;
   background: transparent;
   color: var(--dark-gray);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .talos-button:hover,
@@ -277,7 +278,7 @@ main {
 .mobile-nav-item {
   margin: 1rem 0;
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* Tablet View */
