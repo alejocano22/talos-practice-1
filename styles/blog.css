@@ -23,11 +23,11 @@
 .blog-item:hover,
 .blog-item:active {
   background: url(../images/hover-image.jpg) 0 0 / cover no-repeat;
-  animation: up-down-movement-animation 20s linear infinite;
+  animation: bottom-top-movement-animation 20s linear infinite;
   color: var(--page-green);
 }
 
-@keyframes up-down-movement-animation {
+@keyframes bottom-top-movement-animation {
   50% {
     background-position: bottom;
   }
@@ -71,7 +71,7 @@
 
   .blog-item:hover,
   .blog-item:active {
-    animation: up-down-movement-animation 25s linear infinite;
+    animation: bottom-top-movement-animation 25s linear infinite;
   }
 
   .blog-item-comment {
@@ -102,7 +102,7 @@
 
   .blog-item:hover,
   .blog-item:active {
-    animation: up-down-movement-animation 40s linear infinite;
+    animation: bottom-top-movement-animation 40s linear infinite;
   }
 
   .blog-item-primary {
