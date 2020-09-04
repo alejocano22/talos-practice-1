@@ -1,4 +1,3 @@
-/* TESTIMONIAL WORDS */
 .testimonial {
   display: flex;
   flex-direction: column;
@@ -19,7 +18,7 @@
   width: 100%;
   opacity: 0;
   transform: translateY(-2rem);
-  transition: transform 2s;
+  transition: transform 2s linear;
 }
 
 .testimonial-image {
@@ -29,7 +28,7 @@
 
 .testimonial-message-box {
   padding: 0 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 .testimonial-message {

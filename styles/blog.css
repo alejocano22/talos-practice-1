@@ -1,4 +1,3 @@
-/* OUR BLOG */
 .blog {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,7 @@
 
 .blog-item {
   padding: 2rem;
-  border: solid var(--border-gray) 2px;
+  border: 2px solid var(--border-gray);
   border-radius: 7px;
   background: var(--page-white);
   color: var(--dark-gray);
@@ -24,11 +23,11 @@
 .blog-item:hover,
 .blog-item:active {
   background: url(../images/hover-image.jpg) 0 0 / cover no-repeat;
-  animation: blog-animation 20s linear infinite;
+  animation: up-down-movement-animation 20s linear infinite;
   color: var(--page-green);
 }
 
-@keyframes blog-animation {
+@keyframes up-down-movement-animation {
   50% {
     background-position: bottom;
   }
@@ -72,7 +71,7 @@
 
   .blog-item:hover,
   .blog-item:active {
-    animation: blog-animation 25s linear infinite;
+    animation: up-down-movement-animation 25s linear infinite;
   }
 
   .blog-item-comment {
@@ -103,7 +102,7 @@
 
   .blog-item:hover,
   .blog-item:active {
-    animation: blog-animation 40s linear infinite;
+    animation: up-down-movement-animation 40s linear infinite;
   }
 
   .blog-item-primary {

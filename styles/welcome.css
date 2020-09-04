@@ -1,0 +1,157 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  background: url("../images/home-bg.jpg") center/cover no-repeat border-box;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+  transition: background 1s ease-out;
+}
+
+.welcome-title {
+  display: block;
+  margin: 0;
+  margin-top: 3rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--page-white);
+}
+
+.welcome-paragraph {
+  display: block;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--page-white);
+}
+
+.welcome-buttons {
+  display: flex;
+  margin: 3rem 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.learn-button {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: 2px solid var(--page-white);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--page-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.learn-button:hover {
+  background: var(--page-white);
+  color: var(--page-green);
+}
+
+.learn-button:focus,
+.learn-button:active {
+  border: 2px solid var(--dark-orange);
+  background: var(--orange);
+  color: var(--page-white);
+}
+
+.contact-button {
+  display: none;
+}
+
+/* Tablet View */
+@media (min-width: 577px) {
+  .welcome-title {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+
+  .welcome-paragraph {
+    padding: 0 5rem;
+    font-size: 1rem;
+  }
+
+  .learn-button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  .contact-button {
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding: 0.5rem 2rem;
+    border: 2px solid var(--page-green);
+    border-radius: 3px;
+    background: var(--page-green);
+    color: var(--page-white);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+
+  .contact-button:hover {
+    border: 2px solid var(--page-white);
+    background-color: var(--page-white);
+    color: var(--page-green);
+  }
+
+  .contact-button:focus,
+  .contact-button:active {
+    border: 2px solid var(--dark-orange);
+    background-color: var(--orange);
+    color: var(--page-white);
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .welcome {
+    height: 100vh;
+  }
+
+  .welcome-title {
+    margin: 0;
+    font-size: 4rem;
+  }
+
+  .welcome-paragraph {
+    padding: 1rem;
+    font-size: 1.5rem;
+    min-width: auto;
+    max-width: 60rem;
+  }
+
+  .learn-button {
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    border: 4px solid var(--page-white);
+  }
+
+  .learn-button:focus,
+  .learn-button:active {
+    border: 4px solid var(--dark-orange);
+  }
+
+  .contact-button {
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    border: 4px solid var(--page-green);
+  }
+
+  .contact-button:hover {
+    border: 4px solid var(--page-white);
+  }
+
+  .contact-button:focus,
+  .contact-button:active {
+    border: 4px solid var(--dark-orange);
+  }
+}

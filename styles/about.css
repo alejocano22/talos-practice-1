@@ -1,4 +1,3 @@
-/* GENIUS STUDIO */
 .about {
   display: flex;
   flex-direction: column;
@@ -10,10 +9,11 @@
 .about .section-subtitle,
 .about .section-title {
   text-align: left;
+  padding: 0;
 }
 
 .about .section-subtitle {
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 .genius-video {

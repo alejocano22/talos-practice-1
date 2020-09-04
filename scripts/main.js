@@ -29,14 +29,7 @@ function changeWelcomeImage() {
 }
 
 // Sections map
-const sectionsMap = new Map();
-sectionsMap.set('welcome', 0);
-sectionsMap.set('services', 1);
-sectionsMap.set('about', 2);
-sectionsMap.set('team', 3);
-sectionsMap.set('portfolio', 4);
-sectionsMap.set('blog', 5);
-sectionsMap.set('contact', 6);
+const sectionsArray = ['welcome', 'services', 'about', 'team', 'portfolio', 'blog', 'contact'];
 
 // To hide all active buttons in the nav bar
 function hideAllNavActive() {
@@ -58,8 +51,8 @@ const options = {
 // To observe all sections in the screen
 const observer = new IntersectionObserver(((entries) => {
   entries.forEach((entry) => {
-    const index = sectionsMap.get(entry.target.id);
-    if (!entry.isIntersecting || typeof index === 'undefined') {
+    const index = sectionsArray.indexOf(entry.target.id);
+    if (!entry.isIntersecting || index === -1) {
       return;
     }
     if (index === 0) {

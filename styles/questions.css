@@ -1,4 +1,3 @@
-/* ASKED QUESTIONS */
 .questions {
   display: flex;
   flex-direction: column;
@@ -39,8 +38,8 @@
   padding: 0 2rem;
   border-radius: 0 0 4px 4px;
   color: var(--subtitle-gray);
-  transition: all 0.3s linear;
-  line-height: 1.5rem;
+  transition: height 0.3s linear;
+  line-height: 1.5;
 }
 
 .show-answer {
