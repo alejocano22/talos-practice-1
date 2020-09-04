@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 const welcomeImage = document.querySelector('.welcome');
 const sections = document.querySelectorAll('section');
+const mobileNav = document.querySelector('.mobile-nav');
 const mainNavLinks = document.querySelectorAll('.main-nav-link');
 
 // Array of welcome images
@@ -70,7 +71,15 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-const mobileNav = document.querySelector('.mobile-nav');
+// To open/close mobile nav modal
+function handleMobileBar() {
+  if (mobileNav.classList.contains('mobile-nav-open')) {
+    mobileNav.classList.remove('mobile-nav-open');
+  } else {
+    mobileNav.classList.add('mobile-nav-open');
+  }
+}
+
 const memberBar = document.querySelectorAll('.member-bar');
 const memberBox = document.querySelectorAll('.member-box');
 const workBox = document.querySelectorAll('.work-modal');
@@ -81,15 +90,6 @@ const testimonialButtons = document.querySelectorAll('.testimonial-buttons butto
 const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
 const touchForm = document.querySelector('.touch-form');
-
-// To open/close mobile nav bar
-function handleMobileBar() {
-  if (mobileNav.classList.contains('mobile-nav-open')) {
-    mobileNav.classList.remove('mobile-nav-open');
-  } else {
-    mobileNav.classList.add('mobile-nav-open');
-  }
-}
 
 // To display member bar
 function handleMemberBar() {

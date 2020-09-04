@@ -1,13 +1,13 @@
 /* SERVICES VIEW */
-#what-we-do {
+.services {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
 }
 
-#what-we-do .section-title,
-#what-we-do .section-subtitle {
+.services .section-title,
+.services .section-subtitle {
   width: 100%;
   text-align: left;
 }
@@ -54,7 +54,7 @@
 
 /* Tablet View */
 @media (min-width: 577px) {
-  #what-we-do {
+  .services {
     padding: 3rem 3rem;
   }
 
@@ -65,12 +65,12 @@
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #what-we-do {
+  .services {
     padding: 8rem 5rem;
   }
 
-  #what-we-do .section-title,
-  #what-we-do .section-subtitle {
+  .services .section-title,
+  .services .section-subtitle {
     max-width: 80rem;
   }
   .service-list {
