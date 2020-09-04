@@ -2,6 +2,8 @@
 
 :root {
   --page-green: #65c7b7;
+  --dark-orange: #be7c00;
+  --orange: #ffa500;
   --dark-gray: #575656;
   --subtitle-gray: #817f7f;
   --border-gray: #ebebeb;
@@ -76,10 +78,16 @@ body {
   letter-spacing: 0.1rem;
 }
 
-.learn-button:hover,
-.learn-button:active {
+.learn-button:hover {
   background: var(--page-white);
   color: var(--page-green);
+}
+
+.learn-button:focus,
+.learn-button:active {
+  border: solid var(--dark-orange) 2px;
+  background: var(--orange);
+  color: var(--page-white);
 }
 
 .contact-button {
@@ -119,11 +127,17 @@ body {
     letter-spacing: 0.1rem;
   }
 
-  .contact-button:hover,
-  .contact-button:active {
+  .contact-button:hover {
     border: solid var(--page-white) 2px;
     background-color: var(--page-white);
     color: var(--page-green);
+  }
+
+  .contact-button:focus,
+  .contact-button:active {
+    border: solid var(--dark-orange) 2px;
+    background-color: var(--orange);
+    color: var(--page-white);
   }
 }
 
@@ -151,15 +165,24 @@ body {
     border: solid var(--page-white) 4px;
   }
 
+  .learn-button:focus,
+  .learn-button:active {
+    border: solid var(--dark-orange) 4px;
+  }
+
   .contact-button {
     margin-top: 2rem;
     padding: 1rem 4rem;
     border: solid var(--page-green) 4px;
   }
 
-  .contact-button:hover,
-  .contact-button:active {
+  .contact-button:hover {
     border: solid var(--page-white) 4px;
+  }
+
+  .contact-button:focus,
+  .contact-button:active {
+    border: solid var(--dark-orange) 4px;
   }
 }
 

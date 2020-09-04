@@ -49,11 +49,17 @@
   color: var(--page-white);
 }
 
-.touch-form-button:hover,
-.touch-form-button:active {
+.touch-form-button:hover {
   background: var(--page-white);
   border: solid var(--page-white) 3px;
   color: var(--page-green);
+}
+
+.touch-form-button:focus,
+.touch-form-button:active {
+  background: var(--orange);
+  border: solid var(--dark-orange) 3px;
+  color: var(--page-white);
 }
 
 /* Tablet View */

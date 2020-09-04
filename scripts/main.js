@@ -7,8 +7,8 @@ const memberBars = document.querySelectorAll('.member-bar');
 const workModals = document.querySelectorAll('.work-modal');
 const answers = document.querySelectorAll('.answer');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
-const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile a');
-const testimonialButtons = document.querySelectorAll('.testimonial-buttons a');
+const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile span');
+const testimonialButtons = document.querySelectorAll('.testimonial-buttons span');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -146,7 +146,7 @@ function showSlide(index) {
   testimonialButtons[index].classList.add('testimonial-button-active');
 }
 
-// To prevent default in the touch form
-function preventDefault(event) {
+// Prevent default in the touch form
+function prevent(event) {
   event.preventDefault();
 }
