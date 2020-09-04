@@ -26,7 +26,7 @@ body {
 }
 
 /* WELCOME */
-#welcome {
+.welcome {
   display: flex;
   flex-direction: column;
   background: url("../images/home-bg.jpg") center/cover no-repeat border-box;
@@ -37,7 +37,7 @@ body {
   transition: background 1s ease-out;
 }
 
-#welcome h1 {
+.welcome-title {
   display: block;
   margin: 0;
   margin-top: 3rem;
@@ -47,7 +47,7 @@ body {
   color: var(--page-white);
 }
 
-#welcome p {
+.welcome-paragraph {
   display: block;
   margin: 0;
   padding: 1rem;
@@ -88,12 +88,12 @@ body {
 
 /* Tablet View */
 @media (min-width: 577px) {
-  #welcome h1 {
+  .welcome-title {
     margin-top: 5rem;
     font-size: 2rem;
   }
 
-  #welcome p {
+  .welcome-paragraph {
     padding: 0 5rem;
     font-size: 1rem;
   }
@@ -129,16 +129,16 @@ body {
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #welcome {
+  .welcome {
     height: 100vh;
   }
 
-  #welcome h1 {
+  .welcome-title {
     margin: 0;
     font-size: 4rem;
   }
 
-  #welcome p {
+  .welcome-paragraph {
     padding: 1rem;
     font-size: 1.5rem;
     min-width: auto;
@@ -181,7 +181,6 @@ body {
   align-items: center;
   top: 0;
   width: 100%;
-  height: 100%;
 }
 
 .talos-button {
@@ -220,27 +219,6 @@ body {
   height: 2px;
 }
 
-.main-nav a,
-.mobile-nav a {
-  text-decoration: none;
-  color: var(--dark-gray);
-}
-
-.main-nav {
-  display: none;
-}
-
-.main-nav-item a:hover,
-.main-nav-item a:active,
-.mobile-nav-item a:hover,
-.mobile-nav-item a:active {
-  color: var(--page-green);
-}
-
-.nav-item-active a {
-  color: var(--page-green);
-}
-
 .mobile-nav {
   display: none;
   justify-content: center;
@@ -266,6 +244,27 @@ body {
   margin: 1rem 0;
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+.main-nav-link,
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+.main-nav-link:hover,
+.main-nav-link:active,
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: var(--page-green);
+}
+
+.nav-item-active {
+  color: var(--page-green);
+}
+
+.main-nav {
+  display: none;
 }
 
 /* Tablet View */
@@ -341,7 +340,7 @@ footer {
   padding: 3rem 1.5rem;
 }
 
-footer p {
+.footer-message {
   color: var(--dark-gray);
   font-size: 1rem;
   text-align: center;

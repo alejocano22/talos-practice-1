@@ -1,7 +1,75 @@
 /* eslint-disable no-unused-vars */
-const welcomeImage = document.getElementById('welcome');
-const mainNavItems = document.querySelectorAll('.main-nav-item');
+const welcomeImage = document.querySelector('.welcome');
 const sections = document.querySelectorAll('section');
+const mainNavLinks = document.querySelectorAll('.main-nav-link');
+
+// Array of welcome images
+const welcomeImages = [];
+welcomeImages[0] = 'url("images/home-bg.jpg") center/cover no-repeat border-box';
+welcomeImages[1] = 'url("images/home-bg-2.jpg") center/cover no-repeat border-box';
+
+// Index of the welcome image
+let imageIndex = 0;
+
+// To change welcome image
+function changeWelcomeImage() {
+  if (imageIndex === (welcomeImages.length - 1)) {
+    imageIndex = 0;
+  } else {
+    imageIndex += 1;
+  }
+  welcomeImage.style.background = welcomeImages[imageIndex];
+}
+
+// Sections map
+const sectionsMap = new Map();
+sectionsMap.set('welcome', 0);
+sectionsMap.set('services', 1);
+sectionsMap.set('about', 2);
+sectionsMap.set('team', 3);
+sectionsMap.set('portfolio', 4);
+sectionsMap.set('blog', 5);
+sectionsMap.set('contact', 6);
+
+// To hide all active buttons in the nav bar
+function hideAllNavActive() {
+  mainNavLinks.forEach((button) => {
+    button.classList.remove('nav-item-active');
+  });
+}
+
+// Interval id
+let imageInterval;
+
+// Options for the observer
+const options = {
+  root: null,
+  threshold: 0.50,
+  rootMargin: '0px',
+};
+
+// To observe all sections in the screen
+const observer = new IntersectionObserver(((entries) => {
+  entries.forEach((entry) => {
+    const index = sectionsMap.get(entry.target.id);
+    if (!entry.isIntersecting || typeof index === 'undefined') {
+      return;
+    }
+    if (index === 0) {
+      imageInterval = setInterval(changeWelcomeImage, 4000);
+    } else {
+      clearInterval(imageInterval);
+    }
+    hideAllNavActive();
+    mainNavLinks[index].classList.add('nav-item-active');
+  });
+}), options);
+
+// Observe each section
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
 const mobileNav = document.querySelector('.mobile-nav');
 const memberBar = document.querySelectorAll('.member-bar');
 const memberBox = document.querySelectorAll('.member-box');
@@ -13,18 +81,6 @@ const testimonialButtons = document.querySelectorAll('.testimonial-buttons butto
 const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
 const touchForm = document.querySelector('.touch-form');
-
-// Array of welcome images
-const welcomeImages = [];
-let imageIndex = 0;
-welcomeImages[0] = 'url("images/home-bg.jpg") center/cover no-repeat border-box';
-welcomeImages[1] = 'url("images/home-bg-2.jpg") center/cover no-repeat border-box';
-
-// To change welcome image
-function changeWelcomeImage() {
-  imageIndex = (imageIndex === (welcomeImages.length - 1)) ? 0 : imageIndex += 1;
-  welcomeImage.style.background = welcomeImages[imageIndex];
-}
 
 // To open/close mobile nav bar
 function handleMobileBar() {
@@ -127,68 +183,6 @@ function displayTestimonialSlide() {
 touchForm.addEventListener('submit', (event) => {
   event.preventDefault();
 });
-
-// To hide all active buttons in the nav bar
-function hideAllNavActive() {
-  mainNavItems.forEach((button) => {
-    button.classList.remove('nav-item-active');
-  });
-}
-
-const options = {
-  root: null,
-  threshold: 0.50,
-  rootMargin: '0px',
-};
-
-// To observe all sections in the screen
-const observer = new IntersectionObserver(((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    }
-    switch (entry.target.id) {
-      case 'welcome':
-        hideAllNavActive();
-        mainNavItems[0].classList.add('nav-item-active');
-        break;
-      case 'what-we-do':
-        hideAllNavActive();
-        mainNavItems[1].classList.add('nav-item-active');
-        break;
-      case 'genius-studio':
-        hideAllNavActive();
-        mainNavItems[2].classList.add('nav-item-active');
-        break;
-      case 'team-member':
-        hideAllNavActive();
-        mainNavItems[3].classList.add('nav-item-active');
-        break;
-      case 'latest-work':
-        hideAllNavActive();
-        mainNavItems[4].classList.add('nav-item-active');
-        break;
-      case 'our-blog':
-        hideAllNavActive();
-        mainNavItems[5].classList.add('nav-item-active');
-        break;
-      case 'touch':
-        hideAllNavActive();
-        mainNavItems[6].classList.add('nav-item-active');
-        break;
-      default:
-        break;
-    }
-  });
-}), options);
-
-// Observe each section
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-// Call change welcome image
-setInterval(changeWelcomeImage, 4000);
 
 // Call display member bar
 handleMemberBar();

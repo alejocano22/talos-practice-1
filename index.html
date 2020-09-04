@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="icons/style.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/services.css" />
-    <link rel="stylesheet" href="styles/geniusstudio.css" />
-    <link rel="stylesheet" href="styles/member.css" />
-    <link rel="stylesheet" href="styles/work.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/team.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
     <link rel="stylesheet" href="styles/blog.css" />
     <link rel="stylesheet" href="styles/questions.css" />
     <link rel="stylesheet" href="styles/testimonial.css" />
     <link rel="stylesheet" href="styles/contact.css" />
   </head>
   <body>
-    <section id="welcome">
-      <h1>Genius Web & Talos Inc.</h1>
-      <p>
+    <section id="welcome" class="welcome">
+      <h1 class="welcome-title">Genius Web & Talos Inc.</h1>
+      <p class="welcome-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
       <div class="welcome-buttons">
-        <a href="#what-we-do" class="learn-button">LEARN MORE</a>
-        <a href="#touch" class="contact-button">CONTACT US</a>
+        <a href="#services" class="learn-button">LEARN MORE</a>
+        <a href="#contact" class="contact-button">CONTACT US</a>
       </div>
     </section>
     <header class="main-header">
       <div class="nav-bar">
         <button class="talos-button">Talos</button>
-        <button class="burguer-button" onclick="handleMobileBar()">
+        <button class="burguer-button" onclick="handleMobileBar(this)">
           <span class="burguer-button-bar"></span>
           <span class="burguer-button-bar"></span>
           <span class="burguer-button-bar"></span>
@@ -39,25 +39,25 @@
         <nav class="main-nav">
           <ul class="main-nav-items">
             <li class="main-nav-item">
-              <a href="#welcome">HOME</a>
+              <a href="#welcome" class="main-nav-link">HOME</a>
             </li>
             <li class="main-nav-item">
-              <a href="#what-we-do">SERVICES</a>
+              <a href="#services" class="main-nav-link">SERVICES</a>
             </li>
             <li class="main-nav-item">
-              <a href="#genius-studio">ABOUT</a>
+              <a href="#about" class="main-nav-link">ABOUT</a>
             </li>
             <li class="main-nav-item">
-              <a href="#team-member">TEAM</a>
+              <a href="#team" class="main-nav-link">TEAM</a>
             </li>
             <li class="main-nav-item">
-              <a href="#latest-work">PORTFOLIO</a>
+              <a href="#portfolio" class="main-nav-link">PORTFOLIO</a>
             </li>
             <li class="main-nav-item">
-              <a href="#our-blog">BLOG</a>
+              <a href="#blog" class="main-nav-link">BLOG</a>
             </li>
             <li class="main-nav-item">
-              <a href="#touch">CONTACT</a>
+              <a href="#contact" class="main-nav-link">CONTACT</a>
             </li>
           </ul>
         </nav>
@@ -65,25 +65,25 @@
       <nav class="mobile-nav mobile-nav-open">
         <ul class="mobile-nav-items">
           <li class="mobile-nav-item">
-            <a href="">HOME</a>
+            <a href="#welcome" class="mobile-nav-link">HOME</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#what-we-do">SERVICES</a>
+            <a href="#services" class="mobile-nav-link">SERVICES</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#genius-studio">ABOUT</a>
+            <a href="#about" class="mobile-nav-link">ABOUT</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#team-member">TEAM</a>
+            <a href="#team" class="mobile-nav-link">TEAM</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#latest-work">PORTFOLIO</a>
+            <a href="#portfolio" class="mobile-nav-link">PORTFOLIO</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#our-blog">BLOG</a>
+            <a href="#blog" class="mobile-nav-link">BLOG</a>
           </li>
           <li class="mobile-nav-item">
-            <a href="#touch">CONTACT</a>
+            <a href="#contact" class="mobile-nav-link">CONTACT</a>
           </li>
         </ul>
     </header>
@@ -466,7 +466,7 @@
       </section>
     </main>
     <footer>
-      <p>Copyright © Talos HTML Template | All Rights Reserved.</p>
+      <p class="footer-message">Copyright © Talos HTML Template | All Rights Reserved.</p>
       <div class="footer-icons">
         <div class="footer-icon icon-facebok-2"></div>
         <div class="footer-icon icon-twitter-2"></div>
