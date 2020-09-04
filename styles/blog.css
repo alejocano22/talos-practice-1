@@ -1,5 +1,5 @@
 /* OUR BLOG */
-#our-blog {
+.blog {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,12 +23,12 @@
 
 .blog-item:hover,
 .blog-item:active {
-  background: url(../images/hover-image.jpg) 0% 0% / cover no-repeat;
-  animation: animation 20s linear infinite;
+  background: url(../images/hover-image.jpg) 0 0 / cover no-repeat;
+  animation: blog-animation 20s linear infinite;
   color: var(--page-green);
 }
 
-@keyframes animation {
+@keyframes blog-animation {
   50% {
     background-position: bottom;
   }
@@ -57,7 +57,7 @@
 
 /* Tablet View */
 @media (min-width: 577px) {
-  #our-blog {
+  .blog {
     padding: 3rem 3rem;
   }
 
@@ -72,7 +72,7 @@
 
   .blog-item:hover,
   .blog-item:active {
-    animation: animation 25s linear infinite;
+    animation: blog-animation 25s linear infinite;
   }
 
   .blog-item-comment {
@@ -87,7 +87,7 @@
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #our-blog {
+  .blog {
     padding: 8rem 5rem;
   }
 
@@ -103,7 +103,7 @@
 
   .blog-item:hover,
   .blog-item:active {
-    animation: animation 40s linear infinite;
+    animation: blog-animation 40s linear infinite;
   }
 
   .blog-item-primary {

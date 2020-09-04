@@ -178,12 +178,6 @@ touchForm.addEventListener('submit', (event) => {
   event.preventDefault();
 });
 
-// // Call display member bar
-// handleMemberBar();
-
-// Call display work modal
-handleWorkModal();
-
 // Call display answer
 displayAnswer();
 
