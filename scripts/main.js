@@ -3,7 +3,8 @@ const welcomeImage = document.querySelector('.welcome');
 const sections = document.querySelectorAll('section');
 const mobileNav = document.querySelector('.mobile-nav');
 const mainNavLinks = document.querySelectorAll('.main-nav-link');
-const memberBar = document.querySelectorAll('.member-bar');
+const memberBars = document.querySelectorAll('.member-bar');
+const workModals = document.querySelectorAll('.work-modal');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -83,34 +84,30 @@ function handleMobileBar() {
 
 // To show member bar
 function showMemberBar(index) {
-  memberBar[index].classList.add('member-bar-open');
+  memberBars[index].classList.add('member-bar-open');
 }
 
 // To remove member bar
 function removeMemberBar(index) {
-  memberBar[index].classList.remove('member-bar-open');
+  memberBars[index].classList.remove('member-bar-open');
 }
 
-const workBox = document.querySelectorAll('.work-modal');
-const workModal = document.querySelectorAll('.work-modal');
+// To show work modal
+function showWorkModal(index) {
+  workModals[index].classList.add('work-modal-open');
+}
+
+// To show work modal
+function removeWorkModal(index) {
+  workModals[index].classList.remove('work-modal-open');
+}
+
 const questions = document.querySelectorAll('.question');
 const answers = document.querySelectorAll('.answer');
 const testimonialButtons = document.querySelectorAll('.testimonial-buttons button');
 const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
 const touchForm = document.querySelector('.touch-form');
-
-// To display work modal
-function handleWorkModal() {
-  for (let i = 0; i < workBox.length; i += 1) {
-    workBox[i].addEventListener('mouseenter', () => {
-      workModal[i].classList.add('work-modal-open');
-    });
-    workBox[i].addEventListener('mouseleave', () => {
-      workModal[i].classList.remove('work-modal-open');
-    });
-  }
-}
 
 // To hide all answers
 function hideAnswers() {
