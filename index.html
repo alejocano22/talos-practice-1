@@ -446,21 +446,21 @@
           <a class="testimonial-button" onclick="showSlideMobile(4)"></a>
         </div>
       </section>
-      <section id="touch">
-        <h1 class="section-title">Get in touch</h1>
+      <section id="contact" class="contact">
+        <h2 class="section-title">Get in touch</h2>
         <p class="section-subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <form class="touch-form">
-          <input type="text" id="name" name="name" placeholder="Name" />
-          <input type="email" id="email" name="email" placeholder="Email" />
-          <input type="number" id="phone" name="phone" placeholder="Phone" />
+        <form class="touch-form" onsubmit="preventDefault(event)">
+          <input type="text" id="name" name="name" placeholder="Name" class="touch-form-input"/>
+          <input type="email" id="email" name="email" placeholder="Email" class="touch-form-input"/>
+          <input type="number" id="phone" name="phone" placeholder="Phone" class="touch-form-input"/>
           <textarea
             id="message"
             name="message"
             placeholder="Message"
-          ></textarea>
-          <button type="submit" value="submit">SHOOT MESSAGE</button>
+            class="touch-form-textarea"></textarea>
+          <button type="submit" value="submit" class="touch-form-button">SHOOT MESSAGE</button>
         </form>
       </section>
     </main>

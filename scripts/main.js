@@ -146,9 +146,7 @@ function showSlide(index) {
   testimonialButtons[index].classList.add('testimonial-button-active');
 }
 
-const touchForm = document.querySelector('.touch-form');
-
-// // To prevent default in the touch form
-// touchForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-// });
+// To prevent default in the touch form
+function preventDefault(event) {
+  event.preventDefault();
+}

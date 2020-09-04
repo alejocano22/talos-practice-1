@@ -1,5 +1,5 @@
 /* GET IN TOUCH */
-#touch {
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,12 +9,12 @@
 
 .touch-form {
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
   grid-gap: 1.5rem;
   width: 100%;
 }
 
-.touch-form input {
+.touch-form-input {
   background: transparent;
   border: solid var(--border-gray) 2px;
   border-radius: 5px;
@@ -22,7 +22,7 @@
   font: inherit;
 }
 
-.touch-form textarea {
+.touch-form-textarea {
   background: transparent;
   border: solid var(--border-gray) 2px;
   border-radius: 5px;
@@ -31,13 +31,13 @@
   font: inherit;
 }
 
-.touch-form input:focus,
-.touch-form textarea:focus {
+.touch-form-input:focus,
+.touch-form-textarea:focus {
   outline: none;
   border: solid var(--page-green) 3px;
 }
 
-.touch-form button {
+.touch-form-button {
   outline: none;
   cursor: pointer;
   background: var(--page-green);
@@ -49,8 +49,8 @@
   color: var(--page-white);
 }
 
-.touch-form button:hover,
-.touch-form button:active {
+.touch-form-button:hover,
+.touch-form-button:active {
   background: var(--page-white);
   border: solid var(--page-white) 3px;
   color: var(--page-green);
@@ -58,27 +58,29 @@
 
 /* Tablet View */
 @media (min-width: 577px) {
-  #touch {
+  .contact {
     padding: 3rem 6rem;
   }
 
   .touch-form {
-    display: grid;
-    grid-template-areas:
-      "name text"
-      "email text"
-      "phone text"
-      "button button";
-    grid-gap: 1rem 2rem;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-flow: column;
   }
 
-  .touch-form textarea {
-    grid-area: text;
+  .touch-form-input {
+    padding: 0.6rem 1rem;
+  }
+
+  .touch-form-textarea {
+    grid-column-start: 2;
+    grid-row: 1 / 4;
     height: 100%;
   }
 
-  .touch-form button {
-    grid-area: button;
+  .touch-form-button {
+    grid-column: 1 / -1;
+    grid-row-start: 4;
     justify-self: center;
     width: 80%;
   }
@@ -86,7 +88,7 @@
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #touch {
+  .contact {
     padding: 8rem 10rem;
   }
 
@@ -94,7 +96,11 @@
     max-width: 50rem;
   }
 
-  .touch-form button {
+  .touch-form-input {
+    padding: 1rem 1rem;
+  }
+
+  .touch-form-button {
     max-width: 40rem;
   }
 }
