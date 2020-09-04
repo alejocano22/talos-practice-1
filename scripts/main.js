@@ -3,6 +3,7 @@ const welcomeImage = document.querySelector('.welcome');
 const sections = document.querySelectorAll('section');
 const mobileNav = document.querySelector('.mobile-nav');
 const mainNavLinks = document.querySelectorAll('.main-nav-link');
+const memberBar = document.querySelectorAll('.member-bar');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -80,8 +81,16 @@ function handleMobileBar() {
   }
 }
 
-const memberBar = document.querySelectorAll('.member-bar');
-const memberBox = document.querySelectorAll('.member-box');
+// To show member bar
+function showMemberBar(index) {
+  memberBar[index].classList.add('member-bar-open');
+}
+
+// To remove member bar
+function removeMemberBar(index) {
+  memberBar[index].classList.remove('member-bar-open');
+}
+
 const workBox = document.querySelectorAll('.work-modal');
 const workModal = document.querySelectorAll('.work-modal');
 const questions = document.querySelectorAll('.question');
@@ -90,18 +99,6 @@ const testimonialButtons = document.querySelectorAll('.testimonial-buttons butto
 const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
 const touchForm = document.querySelector('.touch-form');
-
-// To display member bar
-function handleMemberBar() {
-  for (let i = 0; i < memberBox.length; i += 1) {
-    memberBox[i].addEventListener('mouseenter', () => {
-      memberBar[i].classList.add('member-bar-open');
-    });
-    memberBox[i].addEventListener('mouseleave', () => {
-      memberBar[i].classList.remove('member-bar-open');
-    });
-  }
-}
 
 // To display work modal
 function handleWorkModal() {
@@ -184,8 +181,8 @@ touchForm.addEventListener('submit', (event) => {
   event.preventDefault();
 });
 
-// Call display member bar
-handleMemberBar();
+// // Call display member bar
+// handleMemberBar();
 
 // Call display work modal
 handleWorkModal();

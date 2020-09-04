@@ -1,13 +1,9 @@
 /* TEAM MEMBER */
-#team-member {
+.team {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
-}
-
-#team-member ul {
-  padding: 0;
 }
 
 .member-list {
@@ -16,6 +12,7 @@
   grid-template-columns: auto;
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 2rem;
+  padding: 0;
 }
 
 .member {
@@ -31,7 +28,7 @@
   height: 100%;
 }
 
-.member-box img {
+.member-image {
   width: 100%;
   height: 100%;
 }
@@ -76,7 +73,7 @@
 
 /* Tablet View */
 @media (min-width: 577px) {
-  #team-member {
+  .team {
     padding: 3rem 3rem;
   }
 
@@ -88,7 +85,7 @@
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #team-member {
+  .team {
     padding: 8rem 5rem;
   }
 
