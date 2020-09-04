@@ -5,6 +5,7 @@ const mobileNav = document.querySelector('.mobile-nav');
 const mainNavLinks = document.querySelectorAll('.main-nav-link');
 const memberBars = document.querySelectorAll('.member-bar');
 const workModals = document.querySelectorAll('.work-modal');
+const answers = document.querySelectorAll('.answer');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -102,33 +103,24 @@ function removeWorkModal(index) {
   workModals[index].classList.remove('work-modal-open');
 }
 
-const questions = document.querySelectorAll('.question');
-const answers = document.querySelectorAll('.answer');
+// To know what was the last opened answer and close it
+let lastAnswer = 0;
+
+// To open/close the answer
+function handleAnswer(index) {
+  if (answers[index].classList.contains('show-answer')) {
+    answers[index].classList.remove('show-answer');
+  } else {
+    answers[lastAnswer].classList.remove('show-answer');
+    lastAnswer = index;
+    answers[index].classList.add('show-answer');
+  }
+}
+
 const testimonialButtons = document.querySelectorAll('.testimonial-buttons button');
 const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
 const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
 const touchForm = document.querySelector('.touch-form');
-
-// To hide all answers
-function hideAnswers() {
-  answers.forEach((answer) => {
-    answer.classList.remove('show-answer');
-  });
-}
-
-// To display/close an answer
-function displayAnswer() {
-  for (let i = 0; i < questions.length; i += 1) {
-    questions[i].addEventListener('click', () => {
-      if (answers[i].classList.contains('show-answer')) {
-        answers[i].classList.remove('show-answer');
-      } else {
-        hideAnswers();
-        answers[i].classList.add('show-answer');
-      }
-    });
-  }
-}
 
 // To hide all slides and active buttons mobile
 function hideAllTestimonialSlidesMobile() {
@@ -177,9 +169,6 @@ function displayTestimonialSlide() {
 touchForm.addEventListener('submit', (event) => {
   event.preventDefault();
 });
-
-// Call display answer
-displayAnswer();
 
 // Call display slide mobile
 displayTestimonialSlideMobile();
