@@ -28,7 +28,7 @@ function changeWelcomeImage() {
   welcomeImage.style.background = welcomeImages[imageIndex];
 }
 
-// Sections map
+// Sections array
 const sectionsArray = ['welcome', 'services', 'about', 'team', 'portfolio', 'blog', 'contact'];
 
 // To hide all active buttons in the nav bar
