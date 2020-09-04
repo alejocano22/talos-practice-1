@@ -6,6 +6,9 @@ const mainNavLinks = document.querySelectorAll('.main-nav-link');
 const memberBars = document.querySelectorAll('.member-bar');
 const workModals = document.querySelectorAll('.work-modal');
 const answers = document.querySelectorAll('.answer');
+const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
+const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile a');
+const testimonialButtons = document.querySelectorAll('.testimonial-buttons a');
 
 // Array of welcome images
 const welcomeImages = [];
@@ -117,61 +120,35 @@ function handleAnswer(index) {
   }
 }
 
-const testimonialButtons = document.querySelectorAll('.testimonial-buttons button');
-const testimonialButtonsMobile = document.querySelectorAll('.testimonial-buttons-mobile button');
-const testimonialSlideItems = document.querySelectorAll('.testimonial-slide-item');
+// To know what was the last opened slide and close it in mobile
+let lastSlideIndexMobile = 0;
+
+// To show testimonial slides mobile
+function showSlideMobile(index) {
+  testimonialSlideItems[lastSlideIndexMobile].classList.remove('show-slide-mobile');
+  testimonialButtonsMobile[lastSlideIndexMobile].classList.remove('testimonial-button-active');
+  lastSlideIndexMobile = index;
+  testimonialSlideItems[index].classList.add('show-slide-mobile');
+  testimonialButtonsMobile[index].classList.add('testimonial-button-active');
+}
+
+// To know what was the last opened slide and close it in Tablet and Desktop
+let lastSlideIndex = 0;
+
+// To show testimonial slides mobile (Tablet and Desktop)
+function showSlide(index) {
+  testimonialSlideItems[lastSlideIndex * 2].classList.remove('show-slide');
+  testimonialSlideItems[(lastSlideIndex * 2) + 1].classList.remove('show-slide');
+  testimonialButtons[lastSlideIndex].classList.remove('testimonial-button-active');
+  lastSlideIndex = index;
+  testimonialSlideItems[index * 2].classList.add('show-slide');
+  testimonialSlideItems[(index * 2) + 1].classList.add('show-slide');
+  testimonialButtons[index].classList.add('testimonial-button-active');
+}
+
 const touchForm = document.querySelector('.touch-form');
 
-// To hide all slides and active buttons mobile
-function hideAllTestimonialSlidesMobile() {
-  testimonialSlideItems.forEach((slide) => {
-    slide.classList.remove('show-slide-mobile');
-  });
-  testimonialButtonsMobile.forEach((button) => {
-    button.classList.remove('testimonial-button-active');
-  });
-}
-
-// To display slide mobile
-function displayTestimonialSlideMobile() {
-  for (let i = 0; i < testimonialButtonsMobile.length; i += 1) {
-    testimonialButtonsMobile[i].addEventListener('click', () => {
-      hideAllTestimonialSlidesMobile();
-      testimonialSlideItems[i].classList.add('show-slide-mobile');
-      testimonialButtonsMobile[i].classList.add('testimonial-button-active');
-    });
-  }
-}
-
-// To hide all slides and active buttons (Tablet and Desktop)
-function hideAllTestimonialSlides() {
-  testimonialSlideItems.forEach((slide) => {
-    slide.classList.remove('show-slide');
-  });
-  testimonialButtons.forEach((button) => {
-    button.classList.remove('testimonial-button-active');
-  });
-}
-
-// To display slide (Tablet and Desktop)
-function displayTestimonialSlide() {
-  for (let i = 0; i < testimonialButtons.length; i += 1) {
-    testimonialButtons[i].addEventListener('click', () => {
-      hideAllTestimonialSlides();
-      testimonialSlideItems[i * 2].classList.add('show-slide');
-      testimonialSlideItems[(i * 2) + 1].classList.add('show-slide');
-      testimonialButtons[i].classList.add('testimonial-button-active');
-    });
-  }
-}
-
-// To prevent default in the touch form
-touchForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-});
-
-// Call display slide mobile
-displayTestimonialSlideMobile();
-
-// Call display slide (Tablet and Desktop)
-displayTestimonialSlide();
+// // To prevent default in the touch form
+// touchForm.addEventListener('submit', (event) => {
+//   event.preventDefault();
+// });

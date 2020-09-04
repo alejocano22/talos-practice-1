@@ -1,5 +1,5 @@
 /* TESTIMONIAL WORDS */
-#testimonial {
+.testimonial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,16 +27,16 @@
   height: 5rem;
 }
 
-.testimonial-message {
+.testimonial-message-box {
   padding: 0 1rem;
   line-height: 1.5rem;
 }
 
-.testimonial-message p {
+.testimonial-message {
   color: var(--subtitle-gray);
 }
 
-.testimonial-message h1 {
+.testimonial-author {
   font-size: 1rem;
 }
 
@@ -76,11 +76,11 @@
 
 /* Tablet View */
 @media (min-width: 577px) {
-  #testimonial {
+  .testimonial {
     padding: 3rem 3rem;
   }
 
-  .testimonial-message {
+  .testimonial-message-box {
     padding: 0 2rem 0 1rem;
   }
 
@@ -111,7 +111,7 @@
 
 /* Desktop View */
 @media (min-width: 769px) {
-  #testimonial {
+  .testimonial {
     padding: 8rem 5rem;
   }
 
@@ -119,7 +119,7 @@
     max-width: 80rem;
   }
 
-  .testimonial-message h1 {
+  .testimonial-author {
     font-size: 1.2rem;
   }
 }
