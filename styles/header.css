@@ -18,9 +18,9 @@
 }
 
 .talos-button {
-  outline: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   font-family: inherit;
   margin-left: 1rem;
   padding-left: 0;
