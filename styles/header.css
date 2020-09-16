@@ -1,0 +1,168 @@
+.main-header {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  background: var(--page-white);
+  box-shadow: 2px 2px 2px 2px var(--light-gray);
+  width: 100%;
+  z-index: 2;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+}
+
+.talos-button {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  margin-left: 1rem;
+  padding-left: 0;
+  background: transparent;
+  color: var(--dark-gray);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.talos-button:hover,
+.talos-button:active {
+  color: var(--page-green);
+}
+
+.burguer-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 1rem;
+  background: transparent;
+  width: 2.5rem;
+}
+
+.burguer-button-bar {
+  display: block;
+  margin: 0.4rem 0;
+  background: var(--page-green);
+  width: 100%;
+  height: 2px;
+}
+
+.mobile-nav {
+  display: none;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 2px var(--light-gray);
+  width: 100%;
+}
+
+.mobile-nav-open {
+  display: flex;
+}
+
+.mobile-nav-items {
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.mobile-nav-item {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.main-nav-link,
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+.main-nav-link:hover,
+.main-nav-link:active,
+.mobile-nav-link:hover,
+.mobile-nav-link:active {
+  color: var(--page-green);
+}
+
+.nav-item-active {
+  color: var(--page-green);
+}
+
+.main-nav {
+  display: none;
+}
+
+/* Tablet View */
+@media (min-width: 577px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .burguer-button {
+    display: none;
+  }
+
+  .talos-button {
+    margin-left: 3rem;
+  }
+
+  .main-nav {
+    display: flex;
+    width: 100%;
+  }
+
+  .main-nav-items {
+    list-style: none;
+    display: flex;
+    margin-right: 3rem;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .main-nav-item {
+    margin: 0 0.4rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .nav-bar {
+    max-width: 90rem;
+  }
+
+  .talos-button {
+    margin-left: 5rem;
+  }
+
+  .main-nav-items {
+    margin-right: 5rem;
+  }
+
+  .main-nav-item {
+    margin: 0 1rem;
+    font-size: 1rem;
+  }
+}
+
+.section-title {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section-subtitle {
+  padding-bottom: 2rem;
+  color: var(--subtitle-gray);
+  text-align: center;
+  font-size: 1rem;
+}
