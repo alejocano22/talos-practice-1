@@ -1,2 +1,2 @@
-# talos-practice-1
+# Talos Responsive Practice
 Responsive design practice
